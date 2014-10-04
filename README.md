@@ -37,4 +37,4 @@ Applications supported thus far:
 - PowerPoint
 - Safari - more features available than Chrome (copies selected text)
 - Skim - far more features available than Preview (copies text and images, returns to page/selection on reopening)
-	Word
+- Word
