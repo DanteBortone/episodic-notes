@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary title="Episodic Terminology">
+
+
+	<suite name="Episodic Suite" code="EVrb" description="Classes and commands for application: Episodic.">
+
+    <command name="getPathText" code="EVrbGtPT" description="Get file path and selected text.">
+      <cocoa class="DBGetPathAndTextScript"/>
+      <direct-parameter description="The file path.">
+        <type type="text"/>
+      </direct-parameter>
+      
+      <parameter name="CopiedText" code="SelT" type="text" optional="yes"
+        description="Selected text from file.">
+        <cocoa key="CopiedText"/>
+      </parameter>
+      
+    </command>
+    
+    <command name="getApplicationName" code="EVrbGtAN" description="Get name of current application.">
+      
+      <cocoa class="DBApplicationNameScript"/>
+      <direct-parameter description="The name of the application.">
+        <type type="text"/>
+      </direct-parameter>
+    
+    </command>
+    
+    <command name="getFilePath" code="EVrbGAll" description="Get file path and selected text.">
+      <cocoa class="DBGetPathTextOutputClipboardForTitle"/>
+      
+      <direct-parameter description="The file or application path.">
+        <type type="text"/>
+      </direct-parameter>
+      
+      <parameter name="CopiedText" code="CopT" type="text" optional="yes"
+        description="Copied text from file or application. Will be inserted in note.">
+        <cocoa key="CopiedText"/>
+      </parameter>
+      
+      <parameter name="OutputValue" code="OVal" type="text" optional="yes"
+        description="Output value to be sent to application on accessing file.">
+        <cocoa key="OutputValue"/>
+      </parameter>
+      
+      <parameter name="Clipboard" code="CBrd" type="boolean" optional="yes"
+        description="Tells if an image should be imported from the clipboard.">
+        <cocoa key="Clipboard"/>
+      </parameter>
+      
+      <parameter name="Title" code="Titl" type="text" optional="yes"
+        description="Title for created item.">
+        <cocoa key="Title"/>
+      </parameter>
+      
+    </command>
+    
+	</suite>
+
+</dictionary>

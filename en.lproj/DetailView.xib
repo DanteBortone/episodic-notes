@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1070" defaultVersion="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="Detail View Controller" customClass="DBDetailViewController">
+            <connections>
+                <outlet property="detailRelatedTabView" destination="9uP-68-pe4" id="XCM-uo-ezH"/>
+                <outlet property="detailSplitView" destination="61" id="1297"/>
+                <outlet property="detailTabBtn" destination="gu5-dq-wtz" id="a2M-OQ-acZ"/>
+                <outlet property="detailTabHeader" destination="v5E-dv-rQF" id="RjU-1l-NcS"/>
+                <outlet property="detailTabView" destination="101" id="415"/>
+                <outlet property="detailTableView" destination="80" id="1350"/>
+                <outlet property="forwardHistoryBtn" destination="C48-KC-u9A" id="QD0-lF-GIK"/>
+                <outlet property="headerLabel" destination="49" id="246"/>
+                <outlet property="myView" destination="48" id="242"/>
+                <outlet property="noteView" destination="124" id="245"/>
+                <outlet property="primaryOutlineViewController" destination="251" id="255"/>
+                <outlet property="relatedOutlineViewController" destination="252" id="256"/>
+                <outlet property="relatedTabBtn" destination="40Z-45-PUB" id="rS8-PM-EnA"/>
+                <outlet property="removeMyselfBtn" destination="mRv-IJ-H3G" id="3Pf-Uw-54D"/>
+                <outlet property="reverseHistoryBtn" destination="HNf-eJ-QPy" id="VF8-O2-fG9"/>
+                <outlet property="topicFileIconButton" destination="308" id="428"/>
+            </connections>
+        </customObject>
+        <treeController mode="entity" entityName="Detail" fetchPredicateFormat="" automaticallyPreparesContent="YES" childrenKeyPath="subGroups" avoidsEmptySelection="NO" preservesSelection="NO" selectsInsertedObjects="NO" id="254" userLabel="Detail Tree Controller">
+            <declaredKeys>
+                <string>displayName</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentSet" keyPath="managedViewObject.viewTopic.details" id="935">
+                    <dictionary key="options">
+                        <string key="NSValueTransformerName">DBRootObjectsTransformer</string>
+                    </dictionary>
+                </binding>
+                <binding destination="-2" name="sortDescriptors" keyPath="treeNodeSortDescriptors" id="267"/>
+            </connections>
+        </treeController>
+        <objectController id="251" userLabel="Detail Outline View Controller" customClass="DBDetailOutlineViewController">
+            <connections>
+                <outlet property="tree" destination="254" id="260"/>
+                <outlet property="view" destination="80" id="259"/>
+            </connections>
+        </objectController>
+        <treeController mode="entity" entityName="Detail" automaticallyPreparesContent="YES" childrenKeyPath="subGroups" avoidsEmptySelection="NO" preservesSelection="NO" selectsInsertedObjects="NO" id="253" userLabel="Related Tree Controller">
+            <connections>
+                <binding destination="252" name="contentArray" keyPath="relatedContent" id="272"/>
+            </connections>
+        </treeController>
+        <objectController id="252" userLabel="Related Outline View Controller" customClass="DBRelatedOutlineViewController">
+            <connections>
+                <outlet property="tree" destination="253" id="258"/>
+                <outlet property="view" destination="89" id="257"/>
+            </connections>
+        </objectController>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <objectController id="877" customClass="DBEditDatesController">
+            <connections>
+                <outlet property="myWindow" destination="878" id="896"/>
+            </connections>
+        </objectController>
+        <viewController id="400" customClass="DBDetailHeaderMenuDelegate">
+            <connections>
+                <outlet property="tableView" destination="80" id="416"/>
+            </connections>
+        </viewController>
+        <viewController id="420" customClass="DBTopicFileButtonMenuDelegate">
+            <connections>
+                <outlet property="detailViewController" destination="-2" id="423"/>
+                <outlet property="myButton" destination="308" id="422"/>
+            </connections>
+        </viewController>
+        <viewController id="440" customClass="DBSelectedDetailFileButtonMenuDelegate">
+            <connections>
+                <outlet property="detailViewController" destination="-2" id="442"/>
+            </connections>
+        </viewController>
+        <viewController id="417" customClass="DBRelatedHeaderMenuDelegate">
+            <connections>
+                <outlet property="tableView" destination="89" id="419"/>
+            </connections>
+        </viewController>
+        <viewController id="444" customClass="DBTableMenuDelegate">
+            <connections>
+                <outlet property="detailViewController" destination="-2" id="447"/>
+                <outlet property="editDatesController" destination="877" id="899"/>
+                <outlet property="tableView" destination="80" id="446"/>
+            </connections>
+        </viewController>
+        <viewController id="1360" customClass="DBSubTopicMenuDelegate">
+            <connections>
+                <outlet property="detailViewController" destination="-2" id="1362"/>
+                <outlet property="subTopicButton" destination="1353" id="1367"/>
+            </connections>
+        </viewController>
+        <arrayController mode="entity" entityName="OutputScript" automaticallyPreparesContent="YES" id="1194" userLabel="Pop-up array">
+            <connections>
+                <binding destination="-2" name="managedObjectContext" keyPath="appDelegate.managedObjectContext" id="1195"/>
+                <binding destination="-2" name="sortDescriptors" keyPath="ascendingSortDescriptor" id="1301"/>
+            </connections>
+        </arrayController>
+        <window title="Edit Date Links" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="EditDatesPanel" animationBehavior="default" id="878" userLabel="Edit Dates" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="139" y="81" width="276" height="144"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="879">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="887">
+                        <rect key="frame" x="5" y="122" width="264" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="editingDetail.displayName" id="888">
+                            <font key="font" metaFont="smallSystemBold"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="877" name="value" keyPath="editingDetail.displayName" id="903"/>
+                        </connections>
+                    </textField>
+                    <datePicker focusRingType="none" verticalHuggingPriority="750" id="886">
+                        <rect key="frame" x="140" y="92" width="88" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="889">
+                            <font key="font" metaFont="smallSystem"/>
+                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                <!--1982-02-12 08:00:00 -0800-->
+                                <timeZone key="timeZone" name="US/Pacific">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </calendarDate>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        </datePickerCell>
+                        <connections>
+                            <binding destination="877" name="value" keyPath="editingDetail.dateAssociated" id="905"/>
+                        </connections>
+                    </datePicker>
+                    <datePicker focusRingType="none" verticalHuggingPriority="750" id="881">
+                        <rect key="frame" x="140" y="67" width="88" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="894">
+                            <font key="font" metaFont="smallSystem"/>
+                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                <!--1982-02-12 08:00:00 -0800-->
+                                <timeZone key="timeZone" name="US/Pacific">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </calendarDate>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        </datePickerCell>
+                        <connections>
+                            <binding destination="877" name="value" keyPath="editingDetail.dateCreated" id="911"/>
+                        </connections>
+                    </datePicker>
+                    <datePicker focusRingType="none" verticalHuggingPriority="750" id="880">
+                        <rect key="frame" x="140" y="42" width="88" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="895">
+                            <font key="font" metaFont="smallSystem"/>
+                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                <!--1982-02-12 08:00:00 -0800-->
+                                <timeZone key="timeZone" name="US/Pacific">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </calendarDate>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        </datePickerCell>
+                        <connections>
+                            <binding destination="877" name="value" keyPath="editingDetail.dateModified" id="914"/>
+                        </connections>
+                    </datePicker>
+                    <textField verticalHuggingPriority="750" id="885">
+                        <rect key="frame" x="69" y="94" width="66" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Associated:" id="890">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="884">
+                        <rect key="frame" x="86" y="69" width="49" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Created:" id="891">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="883">
+                        <rect key="frame" x="81" y="44" width="54" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Modified:" id="892">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button focusRingType="none" id="882">
+                        <rect key="frame" x="98" y="8" width="80" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="Close" bezelStyle="shadowlessSquare" alignment="center" controlSize="small" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="893">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleWindow:" target="877" id="897"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+        <customView focusRingType="none" id="48" customClass="DBHighlightView">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="506"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <splitView focusRingType="none" autosaveName="" id="61" customClass="DBDetailSplitView">
+                    <rect key="frame" x="-1" y="0.0" width="349" height="486"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <customView focusRingType="none" id="72">
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="292"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <button focusRingType="none" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="77">
+                                    <rect key="frame" x="4" y="3" width="13" height="13"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="78">
+                                        <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="toggleCollapse:" target="61" id="139"/>
+                                    </connections>
+                                </button>
+                                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="75">
+                                    <rect key="frame" x="-1" y="19" width="351" height="273"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <clipView key="contentView" id="7fh-BS-DGc">
+                                        <rect key="frame" x="1" y="17" width="349" height="255"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="317" viewBased="YES" indentationPerLevel="15" outlineTableColumn="83" id="80" customClass="DBDetailOutlineView">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="255"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <size key="intercellSpacing" width="3" height="3"/>
+                                                <color key="backgroundColor" red="0.9143476277" green="0.94927577549999997" blue="0.98069685220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                <tableColumns>
+                                                    <tableColumn identifier="Check" editable="NO" width="15" minWidth="16" maxWidth="15" id="315">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <buttonCell key="dataCell" type="check" bezelStyle="regularSquare" imagePosition="only" controlSize="small" inset="2" id="333">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="CheckCellView" id="744" customClass="DBTableCellButtonView">
+                                                                <rect key="frame" x="1" y="1" width="15" height="19"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <button id="750" customClass="DBViewButton">
+                                                                        <rect key="frame" x="-3" y="-2" width="22" height="18"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" controlSize="mini" refusesFirstResponder="YES" state="on" allowsMixedState="YES" inset="2" id="751">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="miniSystem"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <binding destination="744" name="value" keyPath="objectValue.isChecked" id="754"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="myButton" destination="750" id="Yf0-t7-YhS"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Detail" editable="NO" width="60" minWidth="16" maxWidth="100000" id="83">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" id="84">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="key"/>
+                                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="DetailCellView" autoresizesSubviews="NO" focusRingType="none" id="609" customClass="DBTableCellTextView">
+                                                                <rect key="frame" x="19" y="1" width="60" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <customView autoresizesSubviews="NO" focusRingType="none" id="682" customClass="DBTextViewCell">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                    </customView>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="textView" destination="682" id="684"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                        <connections>
+                                                            <binding destination="254" name="value" keyPath="arrangedObjects" id="933">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Associated" editable="NO" width="63" minWidth="63" maxWidth="63" id="1302">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Associated">
+                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1303">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="AssociatedCellView" focusRingType="none" id="1308" customClass="DBTableCellTextView">
+                                                                <rect key="frame" x="82" y="1" width="63" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <customView focusRingType="none" id="1309" customClass="DBRelatedTextViewCell">
+                                                                        <rect key="frame" x="4" y="0.0" width="54" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                    </customView>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="textView" destination="1309" id="1311"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Created" editable="NO" width="63" minWidth="63" maxWidth="63" id="1317">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Created">
+                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1318">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="CreatedCellView" focusRingType="none" id="1330" customClass="DBTableCellTextView">
+                                                                <rect key="frame" x="148" y="1" width="63" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <customView focusRingType="none" id="1331" customClass="DBRelatedTextViewCell">
+                                                                        <rect key="frame" x="4" y="0.0" width="54" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                    </customView>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="textView" destination="1331" id="1332"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Modified" editable="NO" width="63" minWidth="63" maxWidth="63" id="1333">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Modified">
+                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1334">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="ModifiedCellView" focusRingType="none" id="1339" customClass="DBTableCellTextView">
+                                                                <rect key="frame" x="214" y="1" width="63" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <customView focusRingType="none" id="1340" customClass="DBRelatedTextViewCell">
+                                                                        <rect key="frame" x="4" y="0.0" width="54" height="17"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                    </customView>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="textView" destination="1340" id="1341"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="File" editable="NO" width="20" minWidth="20" maxWidth="20" id="338">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <imageCell key="dataCell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="365"/>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="FileCellView" id="838" customClass="DBTableCellButtonView">
+                                                                <rect key="frame" x="280" y="1" width="20" height="20"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <button focusRingType="none" id="855" customClass="DBViewButton">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="14"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSInfo" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" state="on" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="856">
+                                                                            <behavior key="behavior" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <binding destination="838" name="enabled" keyPath="objectValue.sourceFile" id="862">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                            <binding destination="838" name="image" keyPath="objectValue.sourceFile.fileIcon" id="866">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">DBImageTransformer</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="myButton" destination="855" id="857"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                        <connections>
+                                                            <binding destination="254" name="value" keyPath="arrangedObjects.sourceFile.fileIcon" id="367"/>
+                                                        </connections>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Note" editable="NO" width="15" minWidth="15" maxWidth="15" id="406">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <imageCell key="dataCell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="408"/>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="NoteCellView" id="867" customClass="DBTableCellButtonView">
+                                                                <rect key="frame" x="303" y="1" width="15" height="20"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <button id="868" customClass="DBViewButton">
+                                                                        <rect key="frame" x="2" y="0.0" width="12" height="15"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="radioNoteImage" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" state="on" imageScaling="proportionallyDown" inset="2" id="869">
+                                                                            <behavior key="behavior" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <binding destination="867" name="enabled" keyPath="objectValue.note" id="873">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                            <binding destination="867" name="image" keyPath="objectValue.note" id="875">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">DBHasNoteTransformer</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="myButton" destination="868" id="870"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                        <connections>
+                                                            <binding destination="254" name="value" keyPath="arrangedObjects.note" id="411">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">DBHasNoteTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </tableColumn>
+                                                    <tableColumn identifier="Image" editable="NO" width="20" minWidth="20" maxWidth="20" id="1135">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="1136">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <prototypeCellViews>
+                                                            <tableCellView identifier="ImageCellView" id="1141" customClass="DBTableCellButtonView">
+                                                                <rect key="frame" x="321" y="1" width="20" height="23"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <button id="1142" customClass="DBViewButton">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="14" height="14"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="20x20 camera" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="1143">
+                                                                            <behavior key="behavior" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <binding destination="1141" name="enabled" keyPath="objectValue.image" id="1147">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                            <binding destination="1141" name="image" keyPath="objectValue.image" id="1149">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSValueTransformerName">DBDataToImageTransformer</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="myButton" destination="1142" id="1144"/>
+                                                                </connections>
+                                                            </tableCellView>
+                                                        </prototypeCellViews>
+                                                    </tableColumn>
+                                                </tableColumns>
+                                            </outlineView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="81">
+                                        <rect key="frame" x="1" y="230" width="349" height="14"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="82">
+                                        <rect key="frame" x="207" y="17" width="11" height="216"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <tableHeaderView key="headerView" focusRingType="none" id="317">
+                                        <rect key="frame" x="0.0" y="0.0" width="349" height="17"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </tableHeaderView>
+                                </scrollView>
+                                <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="73">
+                                    <rect key="frame" x="-1" y="17" width="350" height="5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <font key="titleFont" metaFont="system"/>
+                                </box>
+                                <button verticalHuggingPriority="750" id="gu5-dq-wtz">
+                                    <rect key="frame" x="191" y="1" width="87" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="inline" title="Bullet details" alternateTitle="Details" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="mZ1-8x-LOu">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                        <font key="font" metaFont="smallSystemBold"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="selectTab:" target="-2" id="RFj-hp-94m"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" id="40Z-45-PUB">
+                                    <rect key="frame" x="285" y="1" width="57" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="inline" title="Related" alternateTitle="Related" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="j0x-qQ-Tfw">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                        <font key="font" metaFont="smallSystemBold"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="selectTab:" target="-2" id="mCO-eo-J49"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </customView>
+                        <customView focusRingType="none" id="71">
+                            <rect key="frame" x="0.0" y="301" width="349" height="185"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <tabView type="noTabsNoBorder" id="9uP-68-pe4">
+                                    <rect key="frame" x="0.0" y="-1" width="349" height="185.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <tabViewItems>
+                                        <tabViewItem identifier="Details" id="wda-DJ-uxg" userLabel="Bullet detail tab">
+                                            <view key="view" id="h0d-p1-kFc">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="185.5"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <tabView focusRingType="none" type="noTabsNoBorder" id="101">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                        <tabViewItems>
+                                                            <tabViewItem label="File" identifier="FileTab" id="104" userLabel="File Tab">
+                                                                <view key="view" id="105">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <box autoresizesSubviews="NO" borderType="line" id="mbU-SA-uNy">
+                                                                            <rect key="frame" x="2" y="1" width="347" height="162"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <view key="contentView">
+                                                                                <rect key="frame" x="1" y="1" width="345" height="146"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <subviews>
+                                                                                    <textField verticalHuggingPriority="750" id="1180">
+                                                                                        <rect key="frame" x="10" y="12" width="69" height="14"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open using:" id="1181">
+                                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                        </textFieldCell>
+                                                                                    </textField>
+                                                                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="1150">
+                                                                                        <rect key="frame" x="9" y="35" width="327" height="90"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <clipView key="contentView" copiesOnScroll="NO" id="CQr-F0-4sr">
+                                                                                            <rect key="frame" x="1" y="1" width="325" height="88"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                            <subviews>
+                                                                                                <textView focusRingType="none" importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" spellingCorrection="YES" smartInsertDelete="YES" id="1151" customClass="DBUndoTextView">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="88"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                    <size key="minSize" width="325" height="88"/>
+                                                                                                    <size key="maxSize" width="531" height="10000000"/>
+                                                                                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                    <size key="minSize" width="325" height="88"/>
+                                                                                                    <size key="maxSize" width="531" height="10000000"/>
+                                                                                                    <connections>
+                                                                                                        <binding destination="254" name="value" keyPath="selection.outputValue" id="bHo-xH-mf7">
+                                                                                                            <dictionary key="options">
+                                                                                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                                                                                <string key="NSMultipleValuesPlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                                <string key="NSNoSelectionPlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                                <string key="NSNotApplicablePlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                                <string key="NSNullPlaceholder">Optional output value...</string>
+                                                                                                                <string key="NSValueTransformerName">DBAttributedStringTransformer</string>
+                                                                                                            </dictionary>
+                                                                                                        </binding>
+                                                                                                    </connections>
+                                                                                                </textView>
+                                                                                            </subviews>
+                                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                        </clipView>
+                                                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="YES" id="1152">
+                                                                                            <rect key="frame" x="1" y="45" width="124" height="11"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                        </scroller>
+                                                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="1153">
+                                                                                            <rect key="frame" x="125" y="1" width="11" height="44"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                        </scroller>
+                                                                                    </scrollView>
+                                                                                    <popUpButton focusRingType="none" verticalHuggingPriority="750" id="1165">
+                                                                                        <rect key="frame" x="77" y="7" width="262" height="22"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" focusRingType="none" imageScaling="proportionallyDown" inset="2" selectedItem="1168" id="1166">
+                                                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                                            <menu key="menu" title="OtherViews" id="1167">
+                                                                                                <items>
+                                                                                                    <menuItem title="Item 1" state="on" id="1168"/>
+                                                                                                    <menuItem title="Item 2" id="1169"/>
+                                                                                                    <menuItem title="Item 3" id="1170"/>
+                                                                                                </items>
+                                                                                            </menu>
+                                                                                        </popUpButtonCell>
+                                                                                        <connections>
+                                                                                            <binding destination="1194" name="content" keyPath="arrangedObjects" id="1197">
+                                                                                                <dictionary key="options">
+                                                                                                    <bool key="NSInsertsNullPlaceholder" value="YES"/>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                            <binding destination="1194" name="contentValues" keyPath="arrangedObjects.applicationOutputDisplay" previousBinding="1197" id="1252">
+                                                                                                <dictionary key="options">
+                                                                                                    <bool key="NSInsertsNullPlaceholder" value="YES"/>
+                                                                                                    <string key="NSNullPlaceholder">Open with Finder</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                            <binding destination="254" name="selectedObject" keyPath="selection.outputScript" previousBinding="1252" id="1253"/>
+                                                                                            <binding destination="254" name="enabled" keyPath="selection.sourceFile" id="1344">
+                                                                                                <dictionary key="options">
+                                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                        </connections>
+                                                                                    </popUpButton>
+                                                                                    <pathControl focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="1163">
+                                                                                        <rect key="frame" x="1" y="124" width="323" height="22"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                                        <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="1164">
+                                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                                            <url key="url" string="file:///Applications/"/>
+                                                                                        </pathCell>
+                                                                                        <connections>
+                                                                                            <action selector="pathControlClicked:" target="-2" id="1187"/>
+                                                                                            <binding destination="254" name="enabled" keyPath="selection.displayName" id="1191">
+                                                                                                <dictionary key="options">
+                                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                            <binding destination="254" name="value" keyPath="selection.sourceFile.recentPath" id="FLP-Xq-r4y">
+                                                                                                <dictionary key="options">
+                                                                                                    <string key="NSMultipleValuesPlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                    <string key="NSNoSelectionPlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                    <string key="NSNotApplicablePlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                                                                                    <string key="NSNullPlaceholder">Link file...</string>
+                                                                                                    <string key="NSValueTransformerName">DBStringURLTransformer</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                        </connections>
+                                                                                    </pathControl>
+                                                                                    <button id="yx2-lu-9Fp">
+                                                                                        <rect key="frame" x="327" y="130" width="10" height="11"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                                                        <buttonCell key="cell" type="bevel" title="Button" bezelStyle="regularSquare" image="NSStopProgressTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="S88-ug-1en">
+                                                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                            <font key="font" metaFont="system"/>
+                                                                                        </buttonCell>
+                                                                                        <connections>
+                                                                                            <action selector="clearFilePath:" target="-2" id="uqJ-hc-F1c"/>
+                                                                                            <binding destination="254" name="enabled" keyPath="selection.sourceFile" id="net-vv-qbg">
+                                                                                                <dictionary key="options">
+                                                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </view>
+                                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        </box>
+                                                                    </subviews>
+                                                                </view>
+                                                            </tabViewItem>
+                                                            <tabViewItem label="Note" identifier="NoteTab" id="103" userLabel="Note Tab">
+                                                                <view key="view" id="122">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <scrollView autoresizesSubviews="NO" focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="123">
+                                                                            <rect key="frame" x="-1" y="2" width="351" height="148.5"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <clipView key="contentView" autoresizesSubviews="NO" focusRingType="none" id="ccY-X7-Z7z">
+                                                                                <rect key="frame" x="1" y="1" width="349" height="146.5"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <subviews>
+                                                                                    <textView focusRingType="none" importsGraphics="NO" richText="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" spellingCorrection="YES" smartInsertDelete="YES" id="124" customClass="DBNoteTextView">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="146.5"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                        <size key="minSize" width="339" height="146.5"/>
+                                                                                        <size key="maxSize" width="351" height="10000000"/>
+                                                                                        <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                        <size key="minSize" width="339" height="146.5"/>
+                                                                                        <size key="maxSize" width="351" height="10000000"/>
+                                                                                        <connections>
+                                                                                            <binding destination="254" name="value" keyPath="selection.note" id="zsV-Uu-RD4">
+                                                                                                <dictionary key="options">
+                                                                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                                                                    <string key="NSValueTransformerName">DBAttributedStringTransformer</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
+                                                                                        </connections>
+                                                                                    </textView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            </clipView>
+                                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="125">
+                                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                            </scroller>
+                                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="126">
+                                                                                <rect key="frame" x="206" y="1" width="11" height="97"/>
+                                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                            </scroller>
+                                                                        </scrollView>
+                                                                    </subviews>
+                                                                </view>
+                                                            </tabViewItem>
+                                                            <tabViewItem label="Image" identifier="ImageTab" id="102" userLabel="Image Tab">
+                                                                <view key="view" id="127">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <imageView id="1106">
+                                                                            <rect key="frame" x="16" y="4" width="316" height="146"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="grayBezel" id="1107"/>
+                                                                            <connections>
+                                                                                <binding destination="254" name="value" keyPath="selection.image" id="1134">
+                                                                                    <dictionary key="options">
+                                                                                        <string key="NSValueTransformerName">DBDataToImageTransformer</string>
+                                                                                    </dictionary>
+                                                                                </binding>
+                                                                            </connections>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </view>
+                                                            </tabViewItem>
+                                                        </tabViewItems>
+                                                    </tabView>
+                                                    <button verticalHuggingPriority="750" id="JHs-JY-qUd" customClass="DBLockedButton">
+                                                        <rect key="frame" x="0.0" y="170" width="351" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JAD-Ot-JgB">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button identifier="FileTab" toolTip="Show file and file output options." focusRingType="none" id="484" userLabel="File tab btn">
+                                                        <rect key="frame" x="334" y="156.5" width="13" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="TableHeaderFile" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="485">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="detailTabSelected:" target="-2" id="502"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button identifier="NoteTab" toolTip="Show note." focusRingType="none" id="498" userLabel="Note tab btn">
+                                                        <rect key="frame" x="305" y="156.5" width="13" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="radioNoteImage" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="499">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="detailTabSelected:" target="-2" id="503"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button identifier="ImageTab" toolTip="Show image." focusRingType="none" id="500" userLabel="Image tab btn">
+                                                        <rect key="frame" x="320" y="156.5" width="13" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="16x16 camera" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="501">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="detailTabSelected:" target="-2" id="504"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="Check/uncheck bullet." focusRingType="none" id="462">
+                                                        <rect key="frame" x="288" y="153.5" width="19" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" state="on" focusRingType="none" allowsMixedState="YES" inset="2" id="463">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="miniSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <binding destination="254" name="value" keyPath="selection.isChecked" id="483">
+                                                                <dictionary key="options">
+                                                                    <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                                                </dictionary>
+                                                            </binding>
+                                                            <binding destination="254" name="enabled" keyPath="selection.topic" id="998">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </button>
+                                                    <textField verticalHuggingPriority="750" id="v5E-dv-rQF">
+                                                        <rect key="frame" x="3" y="174" width="67" height="11"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File" id="k4O-0l-Faw">
+                                                            <font key="font" metaFont="miniSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </tabViewItem>
+                                        <tabViewItem identifier="Related" id="h3q-xT-lBN" userLabel="Related tab">
+                                            <view key="view" id="EyN-Nl-34F">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="185.5"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="85">
+                                                        <rect key="frame" x="0.0" y="1" width="350" height="186.5"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <clipView key="contentView" id="5gv-oZ-nUB">
+                                                            <rect key="frame" x="1" y="17" width="348" height="168.5"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" autosaveColumns="NO" typeSelect="NO" rowHeight="14" headerView="86" viewBased="YES" indentationPerLevel="10" outlineTableColumn="92" id="89" customClass="DBRelatedOutlineView">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="348" height="168.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <size key="intercellSpacing" width="3" height="3"/>
+                                                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                    <tableColumns>
+                                                                        <tableColumn identifier="Detail" width="241" minWidth="16" maxWidth="1000" id="92">
+                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Bullet">
+                                                                                <font key="font" size="9" name="LucidaGrande"/>
+                                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            </tableHeaderCell>
+                                                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" title="Text Cell" id="93">
+                                                                                <font key="font" metaFont="smallSystem"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <prototypeCellViews>
+                                                                                <tableCellView identifier="RelatedDetailCellView" autoresizesSubviews="NO" focusRingType="none" id="1074" customClass="DBTableCellTextView">
+                                                                                    <rect key="frame" x="1" y="1" width="241" height="17"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                    <subviews>
+                                                                                        <customView autoresizesSubviews="NO" focusRingType="none" id="1075" customClass="DBRelatedTextViewCell">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="92" height="17"/>
+                                                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                        </customView>
+                                                                                    </subviews>
+                                                                                    <connections>
+                                                                                        <outlet property="textView" destination="1075" id="1076"/>
+                                                                                    </connections>
+                                                                                </tableCellView>
+                                                                            </prototypeCellViews>
+                                                                            <connections>
+                                                                                <binding destination="253" name="value" keyPath="arrangedObjects.displayName" id="275">
+                                                                                    <dictionary key="options">
+                                                                                        <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                        <string key="NSValueTransformerName">DBAttributedStringTransformer</string>
+                                                                                    </dictionary>
+                                                                                </binding>
+                                                                            </connections>
+                                                                        </tableColumn>
+                                                                        <tableColumn identifier="Topic" width="101" minWidth="10" maxWidth="3.4028234663852886e+38" id="91">
+                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Topic">
+                                                                                <font key="font" size="9" name="LucidaGrande"/>
+                                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                            </tableHeaderCell>
+                                                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" refusesFirstResponder="YES" alignment="left" title="Text Cell" id="94">
+                                                                                <font key="font" metaFont="smallSystem"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <prototypeCellViews>
+                                                                                <tableCellView identifier="RelatedTopicCellView" autoresizesSubviews="NO" focusRingType="none" id="1080" customClass="DBTableCellTextView">
+                                                                                    <rect key="frame" x="245" y="1" width="101" height="17"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                    <subviews>
+                                                                                        <customView autoresizesSubviews="NO" focusRingType="none" id="1081" customClass="DBRelatedTextViewCell">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="98" height="17"/>
+                                                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                        </customView>
+                                                                                    </subviews>
+                                                                                    <connections>
+                                                                                        <outlet property="textView" destination="1081" id="1082"/>
+                                                                                    </connections>
+                                                                                </tableCellView>
+                                                                            </prototypeCellViews>
+                                                                            <connections>
+                                                                                <binding destination="253" name="value" keyPath="arrangedObjects.topic.displayName" id="1083">
+                                                                                    <dictionary key="options">
+                                                                                        <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                        <string key="NSValueTransformerName">DBAttributedStringTransformer</string>
+                                                                                    </dictionary>
+                                                                                </binding>
+                                                                            </connections>
+                                                                        </tableColumn>
+                                                                    </tableColumns>
+                                                                </outlineView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </clipView>
+                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="88">
+                                                            <rect key="frame" x="1" y="53" width="174" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="87">
+                                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                        <tableHeaderView key="headerView" focusRingType="none" id="86">
+                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableHeaderView>
+                                                    </scrollView>
+                                                </subviews>
+                                            </view>
+                                        </tabViewItem>
+                                    </tabViewItems>
+                                </tabView>
+                            </subviews>
+                        </customView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="250"/>
+                    </holdingPriorities>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue0">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue1">
+                            <integer key="value" value="132"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="collapsibleIndexNum">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="userDefinedDimpleDimension">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="toggleCollapseButton" destination="77" id="1298"/>
+                    </connections>
+                </splitView>
+                <button id="308" userLabel="File Topic Button">
+                    <rect key="frame" x="12" y="487" width="17" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="309">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openFileForTopic:" target="-2" id="310"/>
+                        <binding destination="-2" name="hidden" keyPath="managedViewObject.viewTopic.isFileTopic" id="Tvr-VF-CfL">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </button>
+                <button id="OVk-3z-MUD" userLabel="Date Topic Button">
+                    <rect key="frame" x="12" y="487" width="17" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Calender-icon" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="FHx-Ut-r1a">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="gotoDate:" target="-2" id="kr9-RR-TfL"/>
+                        <binding destination="-2" name="hidden" keyPath="managedViewObject.viewTopic.isDateTopic" id="g88-rM-syc">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </button>
+                <button toolTip="Subtopic links." id="1353" customClass="DBSubTopicsButton">
+                    <rect key="frame" x="14" y="487" width="13" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="local" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="1354">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="image" keyPath="managedViewObject.viewTopic" id="tBz-gO-JpL">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">DBTopicImageTransformer</string>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="hidden" keyPath="managedViewObject.viewTopic.isWikiTopic" id="z9K-Uz-R83">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </button>
+                <textField focusRingType="none" verticalHuggingPriority="750" id="49">
+                    <rect key="frame" x="44" y="488" width="290" height="14"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Detail Outline View" placeholderString="Detail Outline View" id="132">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button id="mRv-IJ-H3G">
+                    <rect key="frame" x="335" y="489" width="10" height="11"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="Button" bezelStyle="regularSquare" image="NSStopProgressTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="i1c-3N-mHT">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="379">
+                    <rect key="frame" x="0.0" y="483" width="349" height="5"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <button id="C48-KC-u9A">
+                    <rect key="frame" x="28" y="484" width="13" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bUL-UV-Oww">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="forwardHistory:" target="-2" id="2gR-y1-Ac1"/>
+                    </connections>
+                </button>
+                <box autoresizesSubviews="NO" horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="52">
+                    <rect key="frame" x="346" y="0.0" width="5" height="506"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <button id="HNf-eJ-QPy">
+                    <rect key="frame" x="0.0" y="484" width="13" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="P6K-KT-ySq">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="reverseHistory:" target="-2" id="2pu-ia-LW0"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="16x16 camera" width="16" height="16"/>
+        <image name="20x20 camera" width="20" height="20"/>
+        <image name="Calender-icon" width="48" height="48"/>
+        <image name="NSGoLeftTemplate" width="9" height="9"/>
+        <image name="NSGoRightTemplate" width="9" height="9"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <image name="NSStopProgressTemplate" width="11" height="11"/>
+        <image name="TableHeaderFile" width="13" height="13"/>
+        <image name="local" width="13" height="13"/>
+        <image name="radioNoteImage" width="15" height="15"/>
+    </resources>
+</document>
