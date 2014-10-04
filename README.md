@@ -21,7 +21,7 @@ Notes are made in topical outlines.  The names of these topical outlines become 
 
 About the repository ————————
 
-This repository has two programs in it.  The main program is "Episodic Notes". The second is a helper app "ScriptTaker”, which will listen for the keyboard shortcut.  Log out and back in for other applications to register for the shortcut  <command @>. Pressing this shortcut command will to make a bullet or note from other programs. 
+This repository was made using xcode. It has two apps. The main program is "Episodic Notes". The second is a helper app "ScriptTaker”, which will listen for the keyboard shortcut.  Log out and back in for other applications to register for the shortcut  <command @>. Pressing this shortcut command will to make a bullet or note from other programs. 
 
 Episodic notes communicates though other applications through applescripts.  This allows users to customize the I’m
 
