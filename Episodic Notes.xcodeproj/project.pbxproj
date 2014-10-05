@@ -60,6 +60,7 @@
 		9A251441195F3D9A00E8A2AC /* DBTopicMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A251440195F3D9A00E8A2AC /* DBTopicMenuDelegate.m */; };
 		9A251445196211D900E8A2AC /* DBScriptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A251444196211D900E8A2AC /* DBScriptTextView.m */; };
 		9A25985119E0AC5500AE80A6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC6A51814204B00BD255B /* Credits.rtf */; };
+		9A25985319E10D5900AE80A6 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A25985219E10D5900AE80A6 /* LICENSE.md */; };
 		9A55F3D518770C46003CF9BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A55F3D418770C46003CF9BA /* Images.xcassets */; };
 		9A7C520918C98C55006B7B2E /* DBObjectClipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */; };
 		9A88D32318A73DEE00DB80AE /* DBRecentDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A88D32218A73DEE00DB80AE /* DBRecentDateTransformer.m */; };
@@ -345,6 +346,7 @@
 		9A251443196211D900E8A2AC /* DBScriptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBScriptTextView.h; sourceTree = "<group>"; };
 		9A251444196211D900E8A2AC /* DBScriptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBScriptTextView.m; sourceTree = "<group>"; };
 		9A25984C19DFC72400AE80A6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9A25985219E10D5900AE80A6 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		9A55F3D418770C46003CF9BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Episodic Notes/Images.xcassets"; sourceTree = "<group>"; };
 		9A7C520718C98C55006B7B2E /* DBObjectClipboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBObjectClipboard.h; sourceTree = "<group>"; };
 		9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBObjectClipboard.m; sourceTree = "<group>"; };
@@ -915,6 +917,7 @@
 			isa = PBXGroup;
 			children = (
 				9A25984C19DFC72400AE80A6 /* README.md */,
+				9A25985219E10D5900AE80A6 /* LICENSE.md */,
 				77C8280B06725ACE000B614F /* NoteTaker_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* NoteTaker_AppDelegate.m */,
 				DD3A38D81628AF21009D784A /* NoteTaker.entitlements */,
@@ -1560,6 +1563,7 @@
 				9A00525918788FC7006F7A96 /* ViewBack.pdf in Resources */,
 				DD94161117B5FD2400BE6AA4 /* SmallFolder.png in Resources */,
 				DD94161317B600AC00BE6AA4 /* SmallCheck.png in Resources */,
+				9A25985319E10D5900AE80A6 /* LICENSE.md in Resources */,
 				9A00524118788EEF006F7A96 /* LinkToSame.pdf in Resources */,
 				DDEACD1517FBE954001CFAC2 /* MoveDragType.png in Resources */,
 				DDEACD1717FBEA50001CFAC2 /* CopyDragType.png in Resources */,
