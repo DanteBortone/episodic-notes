@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ScriptTaker' target in the 'ScriptTaker' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
