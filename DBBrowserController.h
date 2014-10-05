@@ -45,11 +45,17 @@
  
  */
 
+
+//---------------------------------------------
 #import <Cocoa/Cocoa.h>
+//---------------------------------------------
 
 @class DBFileSystemNode;
 @class DBAliasController;
 @class NoteTaker_AppDelegate;
+
+//---------------------------------------------
+
 
 @interface DBBrowserController : NSObject {
 @private

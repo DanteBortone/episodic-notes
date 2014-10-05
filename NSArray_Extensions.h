@@ -31,7 +31,9 @@
 // For example, "Contains "Sorted Tree" by Jonathan Dann" will do.
 
 
+//---------------------------------------------
 #import <Cocoa/Cocoa.h>
+//---------------------------------------------
 
 
 @interface NSArray (DBExtensions)

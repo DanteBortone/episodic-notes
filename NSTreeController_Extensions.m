@@ -9,10 +9,14 @@
 //---------------------------------------------
 #import "NSTreeController_Extensions.h"
 //---------------------------------------------
+
 #import "NSTreeNode_Extensions.h"
 #import "NSIndexPath_Extensions.h"
 #import "NSArray_Extensions.h"
 #import "NoteTaker_AppDelegate.h"
+
+//---------------------------------------------
+
 
 @implementation NSTreeController (DBExtensions)
 

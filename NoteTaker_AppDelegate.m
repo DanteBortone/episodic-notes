@@ -1,21 +1,20 @@
-//
-//  NoteTaker_AppDelegate.m
-//  NoteTaker
-//
-//  Created by Dante Bortone with Copyright on 3/8/12.
-//  Copyright 2012. All rights reserved.
-//
 
-
-//	Next steps
-// do code signing procedure: https://developer.apple.com/library/mac/#documentation/security/Conceptual/CodeSigningGuide/Procedures/Procedures.html
-
-// If you use sortedtree, acknowledgement in an About Page or other appropriate place would be nice.
-// For example, "Contains "Sorted Tree" by Jonathan Dann" will do.
+/*
+ 
+ Episodic Notes: A personal wiki, note taking app for Mac OSX. Create notes through any application on your computer and keep them in one place.
+ 
+ Copyright (C) 2014. Dante Bortone
+ 
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ 
+ */
 
 //---------------------------------------------
 #import "NoteTaker_AppDelegate.h"
 //---------------------------------------------
+
 #import "DBCalendarController.h"
 #import "DBHyperlinkEditor.h"
 #import "DBControllerOfOutlineViews.h"
@@ -30,6 +29,8 @@
 #import "DBCalendarSplitview.h"
 #import "DBMainSplitView.h"
 #import "DBUndoManager.h"
+
+//---------------------------------------------
 
 #define STORAGE_PATH @"episodicdata"
 #define DEMO_DATA_PATH @"episodicdata"

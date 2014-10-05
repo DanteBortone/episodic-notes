@@ -45,7 +45,11 @@
  
  */
 
+
+//---------------------------------------------
 #import <Cocoa/Cocoa.h>
+//---------------------------------------------
+
 
 @interface DBFileSystemBrowserCell : NSTextFieldCell {
 @private

@@ -59,6 +59,7 @@
 		9A22DEA51945090300882F36 /* DBShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22DEA41945090300882F36 /* DBShadowButton.m */; };
 		9A251441195F3D9A00E8A2AC /* DBTopicMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A251440195F3D9A00E8A2AC /* DBTopicMenuDelegate.m */; };
 		9A251445196211D900E8A2AC /* DBScriptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A251444196211D900E8A2AC /* DBScriptTextView.m */; };
+		9A25985119E0AC5500AE80A6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC6A51814204B00BD255B /* Credits.rtf */; };
 		9A55F3D518770C46003CF9BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A55F3D418770C46003CF9BA /* Images.xcassets */; };
 		9A7C520918C98C55006B7B2E /* DBObjectClipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */; };
 		9A88D32318A73DEE00DB80AE /* DBRecentDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A88D32218A73DEE00DB80AE /* DBRecentDateTransformer.m */; };
@@ -155,7 +156,6 @@
 		DDAAC69B1814204B00BD255B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAAC69A1814204B00BD255B /* Cocoa.framework */; };
 		DDAAC6A11814204B00BD255B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC69F1814204B00BD255B /* InfoPlist.strings */; };
 		DDAAC6A31814204B00BD255B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAAC6A21814204B00BD255B /* main.m */; };
-		DDAAC6A71814204B00BD255B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC6A51814204B00BD255B /* Credits.rtf */; };
 		DDAAC6AA1814204B00BD255B /* ScriptTaker_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAAC6A91814204B00BD255B /* ScriptTaker_AppDelegate.m */; };
 		DDAAC6AD1814204B00BD255B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC6AB1814204B00BD255B /* MainMenu.xib */; };
 		DDAAC6B8181423F200BD255B /* DBService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54E9F918120C8500E52B69 /* DBService.m */; };
@@ -344,6 +344,7 @@
 		9A251440195F3D9A00E8A2AC /* DBTopicMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTopicMenuDelegate.m; sourceTree = "<group>"; };
 		9A251443196211D900E8A2AC /* DBScriptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBScriptTextView.h; sourceTree = "<group>"; };
 		9A251444196211D900E8A2AC /* DBScriptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBScriptTextView.m; sourceTree = "<group>"; };
+		9A25984C19DFC72400AE80A6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9A55F3D418770C46003CF9BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Episodic Notes/Images.xcassets"; sourceTree = "<group>"; };
 		9A7C520718C98C55006B7B2E /* DBObjectClipboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBObjectClipboard.h; sourceTree = "<group>"; };
 		9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBObjectClipboard.m; sourceTree = "<group>"; };
@@ -913,6 +914,7 @@
 		29B97314FDCFA39411CA2CEA /* NoteTaker */ = {
 			isa = PBXGroup;
 			children = (
+				9A25984C19DFC72400AE80A6 /* README.md */,
 				77C8280B06725ACE000B614F /* NoteTaker_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* NoteTaker_AppDelegate.m */,
 				DD3A38D81628AF21009D784A /* NoteTaker.entitlements */,
@@ -946,6 +948,7 @@
 				9A55F3D418770C46003CF9BA /* Images.xcassets */,
 				8D1107310486CEB800E47090 /* NoteTaker-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				DDAAC6A51814204B00BD255B /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1249,7 +1252,6 @@
 				DDAAC69F1814204B00BD255B /* InfoPlist.strings */,
 				DDAAC6A21814204B00BD255B /* main.m */,
 				DDAAC6A41814204B00BD255B /* ScriptTaker-Prefix.pch */,
-				DDAAC6A51814204B00BD255B /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1548,6 +1550,7 @@
 				9A1B770618E7864B00604364 /* 16x16 camera.png in Resources */,
 				DD80FD0416F4F59F00546551 /* radioPicImage.png in Resources */,
 				DD0BD333178CB2AA00FC1C73 /* DetailView.xib in Resources */,
+				9A25985119E0AC5500AE80A6 /* Credits.rtf in Resources */,
 				DDEC6E3B179C9E2700B82623 /* PreviewView.xib in Resources */,
 				DDEC6E3C179C9E2700B82623 /* HeaderView.xib in Resources */,
 				9A00524018788EEF006F7A96 /* LinkToPrevious.pdf in Resources */,
@@ -1588,7 +1591,6 @@
 				9A00524618788F0C006F7A96 /* StatusActive.pdf in Resources */,
 				9AE0F6A5190352E5004CC3EF /* Scriptaker icon.pdf in Resources */,
 				9A02F28C1903568B008A181D /* AppIcon.pdf in Resources */,
-				DDAAC6A71814204B00BD255B /* Credits.rtf in Resources */,
 				9A00524718788F0C006F7A96 /* StatusRunning.pdf in Resources */,
 				DDAAC6AD1814204B00BD255B /* MainMenu.xib in Resources */,
 			);
@@ -1830,6 +1832,7 @@
 				DDAAC6A61814204B00BD255B /* en */,
 			);
 			name = Credits.rtf;
+			path = ScriptTaker;
 			sourceTree = "<group>";
 		};
 		DDAAC6AB1814204B00BD255B /* MainMenu.xib */ = {

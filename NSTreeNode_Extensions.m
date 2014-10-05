@@ -34,8 +34,11 @@
 //---------------------------------------------
 #import "NSTreeNode_Extensions.h"
 //---------------------------------------------
+
 #import "NSIndexPath_Extensions.h"
 #import "DBTopicObject.h"
+
+//---------------------------------------------
 
 
 @implementation NSTreeNode (DBExtensions)

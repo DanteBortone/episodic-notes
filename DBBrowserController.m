@@ -45,9 +45,11 @@
  
  */
 
+
 //---------------------------------------------
 #import "DBBrowserController.h"
 //---------------------------------------------
+
 #import "DBFileSystemNode.h"
 #import "DBFileSystemBrowserCell.h"
 #import "DBAliasController.h"
@@ -56,6 +58,8 @@
 #import "DBDetailViewController.h"
 #import "DBDetailOutlineViewController.h"
 #import "DBFileTopic.h"
+
+//---------------------------------------------
 
 
 @implementation DBBrowserController

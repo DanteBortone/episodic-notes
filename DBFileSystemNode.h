@@ -45,7 +45,11 @@
  
  */
 
+
+//---------------------------------------------
 #import <Cocoa/Cocoa.h>
+//---------------------------------------------
+
 
 // This is a simple wrapper around the file system. Its main purpose is to cache children.
 @interface DBFileSystemNode : NSObject {
