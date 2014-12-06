@@ -68,7 +68,7 @@
 {
 
   // doesn't need to wait for awake from nib
-  [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:YES] forKey: @"calendarIsHidden"];
+  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"calendarIsHidden"];
   
 }
 
@@ -132,6 +132,7 @@
 - (void)splitViewDidResizeSubviews:(NSNotification *)aNotification
 {
   //NSLog(@"splitViewDidResizeSubviews");
+
   
   if ([self isSubviewCollapsed:collapsibleSubview]){
     
@@ -190,7 +191,15 @@
 // this makes sure they are set the same
 - (void)initCalendarState
 {
-  BOOL calendarShouldBeHidden = [[NSUserDefaults standardUserDefaults] valueForKey:@"calendarIsHidden"];
+  //NSLog(@"initCalendarState");
+  
+  //[[NSUserDefaults standardUserDefaults] setBool:NO forKey: @"calendarIsHidden"];
+
+  BOOL calendarShouldBeHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
+
+  
+  //NSLog(@"before init calendarIsHidden: %@", calendarShouldBeHidden?@"YES":@"NO" );
+
   
   if (calendarShouldBeHidden)
     
@@ -219,21 +228,22 @@
 - (IBAction)toggleCollapse:(id)sender;
 {
 
-  BOOL calendarIsHidden = [[NSUserDefaults standardUserDefaults] valueForKey:@"calendarIsHidden"];
+  BOOL calendarIsHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
   
-  
-  
+  //NSLog(@"--------------------------");
+  //NSLog(@"original value of calendarIsHidden: %@", calendarIsHidden?@"YES":@"NO" );
+
   
   if (calendarIsHidden)
     
   {
-    //NSLog(@"calendar SHOULD be hidden");
+    //NSLog(@"open");
     
     [self uncollapse];
   }
   else
   {
-    //NSLog(@"calendar should NOT be hidden");
+    //NSLog(@"collapse");
     
     [self collapse];
     
@@ -250,20 +260,25 @@
 
 -(void) collapse
 {
-  
+  //NSLog(@"collapse");
+
   [calendarToggle setState:0];
 
-  float constantWidth = collapsibleSubview.frame.size.width;
+  [collapsibleSubview setHidden:YES];
 
-  //NSLog(@"constantWidth: %f",constantWidth);
+  
+  float constantWidth = collapsibleSubview.frame.size.width;
   [collapsibleSubview setFrameSize:NSMakeSize(constantWidth, 0.0)];
   [resizableSubview setFrameSize:NSMakeSize(constantWidth, self.frame.size.height - [self dividerThickness])];
   
+  BOOL calendarIsHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
+  //NSLog(@"before setting calendarIsHidden: %@", calendarIsHidden?@"YES":@"NO" );
 
-  //[ calendarCheckBox setState:0];
+  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"calendarIsHidden"];
   
-  [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:YES] forKey:@"calendarIsHidden"];
-  
+  calendarIsHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
+  //NSLog(@"after setting calendarIsHidden: %@", calendarIsHidden?@"YES":@"NO" );
+
 }
 
 // -------------------------------------------------------------------------------
@@ -276,15 +291,21 @@
 {
   //NSLog(@"uncollapse");
   [calendarToggle setState:1];
+
   
   float constantWidth = collapsibleSubview.frame.size.width;
-
   [collapsibleSubview setFrameSize:NSMakeSize(constantWidth, uncollapsedSize)];
   [resizableSubview setFrameSize:NSMakeSize(constantWidth, self.frame.size.height - uncollapsedSize - [self dividerThickness])];
   
-  //[ calendarCheckBox setState:1];
+  [collapsibleSubview setHidden:NO];
 
-  [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:NO] forKey:@"calendarIsHidden"];
+  BOOL calendarIsHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
+  //NSLog(@"before setting calendarIsHidden: %@", calendarIsHidden?@"YES":@"NO" );
+
+  [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"calendarIsHidden"];
+  
+  calendarIsHidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"calendarIsHidden"];
+  //NSLog(@"after setting calendarIsHidden: %@", calendarIsHidden?@"YES":@"NO" );
 
 }
 
