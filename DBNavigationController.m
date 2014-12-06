@@ -64,6 +64,7 @@
   
   [folderTab setState:0];
   [filesTab setState:0];
+  [recentTab setState:0];
   
   [sender setState:1];
 
