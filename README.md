@@ -17,9 +17,14 @@ Take notes on:
 Notes link back to the file, to the page and to the exact words you took notes on. File links are dynamic. Files can be renamed and moved and Episodic can still find them.
 
 
+**Outline stucture**
+--------------------------------------
+Outlines are associated with a date, file or a topic.
+
+
 **Personal wiki**
 --------------------------------------
-Notes are made in topical outlines.  The names of these topical outlines become wiki words.  If these names are typed in any bullet or note they automatically create a hyperlink that will link back to that outline.
+The names of topical outlines become wiki words.  If wiki words are typed in any bullet or note they automatically create a hyperlink that will link back to that topic.
 
 
 **About the repository**
