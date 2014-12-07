@@ -31,7 +31,7 @@ The names of topical outlines become wiki words.  If wiki words are typed in any
 --------------------------------------
 This repository was made using xcode. It has two apps. The main program is "Episodic Notes". The second is a helper app "ScriptTaker”, which will listen for the keyboard shortcut.  Log out and back in for other applications to register for the shortcut  **<command @>**. Pressing this shortcut command will to make a bullet or note from other programs.
 
-Episodic notes communicates though other applications through applescripts.  This allows users to customize the way the Episodic will handle the way to take notes for each application.
+Episodic notes communicates with other applications through applescripts.  This allows users to customize the way Episodic will handle taking notes for each application.
 
 
 **Supported applications**
