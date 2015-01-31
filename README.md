@@ -46,4 +46,5 @@ Episodic notes communicates with other applications through applescripts.  This 
 - PowerPoint
 - Safari - more features available than Chrome (copies selected text)
 - Skim - far more features available than Preview (copies text and images, returns to page/selection on reopening)
+- QuickTime Player
 - Word
