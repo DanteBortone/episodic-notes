@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1070" identifier="macosx"/>
+        <deployment version="1070" defaultVersion="1070" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
     </dependencies>
     <objects>
@@ -1603,7 +1603,7 @@ CA
                                             <action selector="selectTab:" target="11137" id="11151"/>
                                         </connections>
                                     </button>
-                                    <button identifier="Files" toolTip="Show rescent outline selections" verticalHuggingPriority="750" id="kz0-l6-arq">
+                                    <button identifier="Recent" toolTip="Show rescent outline selections" verticalHuggingPriority="750" id="kz0-l6-arq">
                                         <rect key="frame" x="156" y="555" width="36" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" alternateTitle="Recent" bezelStyle="regularSquare" image="clock" imagePosition="below" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rdv-SA-IU4">
@@ -2858,7 +2858,7 @@ IA
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveName="searchTable" headerView="2408" id="2407">
-                                    <rect key="frame" x="0.0" y="0.0" width="598" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="583" height="19"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
