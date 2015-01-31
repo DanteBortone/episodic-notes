@@ -63,6 +63,9 @@
 		9A25985319E10D5900AE80A6 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A25985219E10D5900AE80A6 /* LICENSE.md */; };
 		9A55F3D518770C46003CF9BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A55F3D418770C46003CF9BA /* Images.xcassets */; };
 		9A7C520918C98C55006B7B2E /* DBObjectClipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */; };
+		9A7F9E751A33E44A00A7C8E5 /* AppIcon512dpi180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */; };
+		9A7F9E791A33E53A00A7C8E5 /* AppIcon128dpi90.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */; };
+		9A7F9E7D1A33F1DD00A7C8E5 /* AppIcon32dpi180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F9E7C1A33F1DD00A7C8E5 /* AppIcon32dpi180.png */; };
 		9A88D32318A73DEE00DB80AE /* DBRecentDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A88D32218A73DEE00DB80AE /* DBRecentDateTransformer.m */; };
 		9AA7678E18F3828D0013E4DB /* DBSelectButtonAfterEditTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7678D18F3828D0013E4DB /* DBSelectButtonAfterEditTextFieldView.m */; };
 		9AA7679118F38D480013E4DB /* lock_1396939753.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AA7679018F38D480013E4DB /* lock_1396939753.png */; };
@@ -350,6 +353,9 @@
 		9A55F3D418770C46003CF9BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Episodic Notes/Images.xcassets"; sourceTree = "<group>"; };
 		9A7C520718C98C55006B7B2E /* DBObjectClipboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBObjectClipboard.h; sourceTree = "<group>"; };
 		9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBObjectClipboard.m; sourceTree = "<group>"; };
+		9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon512dpi180.png; path = Images/AppIcon512dpi180.png; sourceTree = "<group>"; };
+		9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon128dpi90.png; path = Images/AppIcon128dpi90.png; sourceTree = "<group>"; };
+		9A7F9E7C1A33F1DD00A7C8E5 /* AppIcon32dpi180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon32dpi180.png; path = Images/AppIcon32dpi180.png; sourceTree = "<group>"; };
 		9A88D32118A73DEE00DB80AE /* DBRecentDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecentDateTransformer.h; sourceTree = "<group>"; };
 		9A88D32218A73DEE00DB80AE /* DBRecentDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecentDateTransformer.m; sourceTree = "<group>"; };
 		9AA7678C18F3828D0013E4DB /* DBSelectButtonAfterEditTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSelectButtonAfterEditTextFieldView.h; sourceTree = "<group>"; };
@@ -1099,6 +1105,9 @@
 				9AE0F6A4190352E5004CC3EF /* Scriptaker icon.pdf */,
 				9AE0F6A2190352AB004CC3EF /* AppIcon.pdf */,
 				9AA7679018F38D480013E4DB /* lock_1396939753.png */,
+				9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */,
+				9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */,
+				9A7F9E7C1A33F1DD00A7C8E5 /* AppIcon32dpi180.png */,
 				9A1B770D18EA4EF500604364 /* list_bullets.png */,
 				9A1B770518E7864B00604364 /* 16x16 camera.png */,
 				9A1B770318E7863900604364 /* 20x20 camera.png */,
@@ -1530,7 +1539,9 @@
 				9A00523E18788EEF006F7A96 /* Home.pdf in Resources */,
 				9A0EBAC718E7653F00922EF7 /* Calender-icon.png in Resources */,
 				9A1B770A18E876AB00604364 /* Internal.icns in Resources */,
+				9A7F9E791A33E53A00A7C8E5 /* AppIcon128dpi90.png in Resources */,
 				DD519A4B15B3CE5100DBC21E /* GenericFolderIcon.png in Resources */,
+				9A7F9E7D1A33F1DD00A7C8E5 /* AppIcon32dpi180.png in Resources */,
 				9A0EBAC118E75B4600922EF7 /* clock.png in Resources */,
 				DD519A4C15B3CE5100DBC21E /* OpenFolderIcon.png in Resources */,
 				DDE937A615CF37B0002E1161 /* ORBPlus.png in Resources */,
@@ -1541,6 +1552,7 @@
 				DDB95FF916251E9100524C93 /* GradientSplitViewDimpleBitmap.tif in Resources */,
 				9A1B770818E79AC600604364 /* view_right-256.png in Resources */,
 				DDB95FFA16251E9100524C93 /* GradientSplitViewDimpleVector.pdf in Resources */,
+				9A7F9E751A33E44A00A7C8E5 /* AppIcon512dpi180.png in Resources */,
 				DDC4885E16AE534000B07E47 /* DragCopy.png in Resources */,
 				9A00525518788FB5006F7A96 /* Script.pdf in Resources */,
 				9A00523F18788EEF006F7A96 /* Icon.png in Resources */,
