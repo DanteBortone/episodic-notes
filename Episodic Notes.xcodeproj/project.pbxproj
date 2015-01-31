@@ -317,6 +317,7 @@
 		9A00524C18788F25006F7A96 /* ViewFwd.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = ViewFwd.pdf; path = Images/ViewFwd.pdf; sourceTree = "<group>"; };
 		9A00524D18788F25006F7A96 /* W.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = W.pdf; path = Images/W.pdf; sourceTree = "<group>"; };
 		9A00525418788FB5006F7A96 /* Script.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Script.pdf; path = Images/Script.pdf; sourceTree = "<group>"; };
+		9A043E071A7C63DE005BF73F /* Episodic promo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Episodic promo.jpg"; path = "Images/Episodic promo.jpg"; sourceTree = "<group>"; };
 		9A0EBAC018E75B4500922EF7 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		9A0EBAC218E7653400922EF7 /* Folder-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Folder-icon.png"; sourceTree = "<group>"; };
 		9A0EBAC318E7653400922EF7 /* Folder-recent-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Folder-recent-icon.png"; sourceTree = "<group>"; };
@@ -1102,6 +1103,7 @@
 		DD519A4615B3CE3600DBC21E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9A043E071A7C63DE005BF73F /* Episodic promo.jpg */,
 				9AE0F6A4190352E5004CC3EF /* Scriptaker icon.pdf */,
 				9AE0F6A2190352AB004CC3EF /* AppIcon.pdf */,
 				9AA7679018F38D480013E4DB /* lock_1396939753.png */,
