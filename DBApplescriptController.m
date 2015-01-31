@@ -1179,6 +1179,7 @@
   [self setupPowerPointScripts];
   [self setupSafariScripts];
   [self setupSkimScripts];
+  [self setupQuickTimeScripts];
   [self setupWordScripts];
   
   [appDelegate save];
@@ -2398,6 +2399,67 @@
                          "return theArray\n"
                          "end theSplit\n"];
   
+  
+}
+
+// -------------------------------------------------------------------------------
+
+//
+
+// -------------------------------------------------------------------------------
+
+-(void) setupQuickTimeScripts{
+  
+  DBApplication *application = [self applicationWithName:@"QuickTime Player"];
+  
+  DBInputScript * inputScript = [self inputScriptNamed:@"Default Input" forApplication:application];
+  
+  inputScript.isEditable = [NSNumber numberWithBool:NO];
+  
+  inputScript.isActiveScript = [NSNumber numberWithBool:YES];
+  
+  inputScript.script = [NSString stringWithFormat:
+                        @"--init variables--\n"
+                        //"--TEST WORKED!!\n"
+                        
+                        
+                        @"set filePath to \"\" -- Mac HFS\n"
+                        "set selText to \"\" -- \n"
+                        "set output to \"\" -- current time in seconds\n"
+                        "set wantImage to false -- can I copy an image frame?\n"
+                        "set detailName to \"\" -- let episodic handle this\n"
+                        "\n"
+                        "tell application \"QuickTime Player\"\n"
+                        "\n"
+                        "set doc to the front document\n"
+                        "pause doc\n"
+                        "set filePath to file of doc as string\n"
+                        "set currentTime to current time of doc\n"
+                        "\n"
+                        "\n"
+                        "set output to currentTime\n"
+                        "end tell\n"
+                        "\n"
+                        "tell application \"Episodic Notes\"\n"
+                        "getFilePath filePath CopiedText selText OutputValue output Clipboard wantImage Title detailName with args\n"
+                        "end tell\n"
+                        ];
+  
+  DBOutputScript * outputScript =  [self outputScriptNamed:@"Default Output" forApplication:application];
+  
+  outputScript.isEditable = [NSNumber numberWithBool:NO];
+  
+  inputScript.outputScript = outputScript;
+  
+  outputScript.script = [NSString stringWithFormat:
+                         @"tell application \"QuickTime Player\"\n"
+                         "\n"
+                         "open filePath\n"
+                         "set doc to the front document\n"
+                         "\n"
+                         "set the current time of doc to output\n"
+                         "\n"
+                         "end tell\n"];
   
 }
 
