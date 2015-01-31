@@ -34,8 +34,8 @@
 
 #define STORAGE_PATH @"episodicdata"
 #define DEMO_DATA_PATH @"episodicdata"
-#define CURRENT_APPLESCRIPT_VERSION 0.3f
-#define CURRENT_PROGRAM_VERSION 0.4f
+#define CURRENT_APPLESCRIPT_VERSION 1.1f
+#define CURRENT_PROGRAM_VERSION 1.0f
 #define PATH_DIRECTORY @"EpisodicNotes/Journal" // use "EpisodicNotes/Demo" or something else here if you just want to input test data
 
 
