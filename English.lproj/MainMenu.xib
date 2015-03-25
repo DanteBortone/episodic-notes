@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1070" defaultVersion="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -297,13 +297,6 @@ CA
                                 <rect key="frame" x="0.0" y="0.0" width="211" height="607"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="9927">
-                                        <rect key="frame" x="208" y="0.0" width="5" height="607"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
-                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <font key="titleFont" metaFont="system"/>
-                                    </box>
                                     <splitView identifier="CalendarSplitView0" autosaveName="CalSplitView42" dividerStyle="thin" id="4c4-3d-Udn" customClass="DBCalendarSplitview">
                                         <rect key="frame" x="0.0" y="0.0" width="211" height="530"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,11 +306,11 @@ CA
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <customView id="kdO-ki-fYc" customClass="DBGradientView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="211" height="139"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="211" height="158"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     </customView>
                                                     <button toolTip="Last month." verticalHuggingPriority="750" id="11539">
-                                                        <rect key="frame" x="-7" y="141" width="57" height="17"/>
+                                                        <rect key="frame" x="-7" y="143" width="57" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <buttonCell key="cell" type="smallSquare" title="&lt;" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" imageScaling="proportionallyDown" inset="2" id="11540">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -328,7 +321,7 @@ CA
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Next month." verticalHuggingPriority="750" id="11537">
-                                                        <rect key="frame" x="159" y="141" width="57" height="17"/>
+                                                        <rect key="frame" x="159" y="143" width="57" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <buttonCell key="cell" type="smallSquare" title="&gt;" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" imageScaling="proportionallyDown" inset="2" id="11538">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -886,7 +879,7 @@ CA
                                                         </subviews>
                                                     </customView>
                                                     <button verticalHuggingPriority="750" id="11535">
-                                                        <rect key="frame" x="47" y="141.5" width="116.5" height="17"/>
+                                                        <rect key="frame" x="47" y="142.5" width="116.5" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="smallSquare" title="Today" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" state="on" imageScaling="proportionallyDown" inset="2" id="11536">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -897,7 +890,7 @@ CA
                                                         </connections>
                                                     </button>
                                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="0Iq-Bk-LNQ">
-                                                        <rect key="frame" x="0.0" y="137" width="211" height="5"/>
+                                                        <rect key="frame" x="0.0" y="140" width="211" height="5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -922,7 +915,7 @@ CA
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <comboBox toolTip="Goto selected topic." focusRingType="none" verticalHuggingPriority="750" id="12401" customClass="DBTopicNavComboBox">
-                                                                            <rect key="frame" x="5" y="40" width="205" height="19"/>
+                                                                            <rect key="frame" x="4" y="39" width="206" height="19"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                             <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" focusRingType="none" numberOfVisibleItems="5" id="12402" customClass="DBComboBoxCell">
                                                                                 <font key="font" metaFont="smallSystem"/>
@@ -962,13 +955,13 @@ CA
                                                                             </connections>
                                                                         </button>
                                                                         <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="2130">
-                                                                            <rect key="frame" x="-1" y="61" width="213" height="289"/>
+                                                                            <rect key="frame" x="-1" y="61" width="213" height="292"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <clipView key="contentView" id="7Fc-6j-4KI">
                                                                                 <rect key="frame" x="1" y="17" width="211" height="293"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <subviews>
-                                                                                    <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="m3X-ke-5VW" viewBased="YES" indentationPerLevel="17" autoresizesOutlineColumn="YES" outlineTableColumn="2134" id="2133" userLabel="TopicFolderView" customClass="DBTopicFolderView">
+                                                                                    <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="17" autoresizesOutlineColumn="YES" outlineTableColumn="2134" id="2133" userLabel="TopicFolderView" customClass="DBTopicFolderView">
                                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                                         <size key="intercellSpacing" width="3" height="1"/>
                                                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1319,10 +1312,6 @@ CA
                                                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="NO" id="2131">
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                             </scroller>
-                                                                            <tableHeaderView key="headerView" id="m3X-ke-5VW">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="211" height="17"/>
-                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                            </tableHeaderView>
                                                                         </scrollView>
                                                                         <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="12405">
                                                                             <rect key="frame" x="0.0" y="35" width="211" height="5"/>
@@ -1332,11 +1321,11 @@ CA
                                                                             <font key="titleFont" metaFont="system"/>
                                                                         </box>
                                                                         <textField verticalHuggingPriority="750" id="r2F-6x-csB">
-                                                                            <rect key="frame" x="3" y="352.5" width="96" height="14"/>
+                                                                            <rect key="frame" x="6" y="353.5" width="96" height="14"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Topics" id="IaJ-ES-Hcx">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" red="0.32941177490000001" green="0.32941177490000001" blue="0.32941177490000001" alpha="1" colorSpace="deviceRGB"/>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -1351,43 +1340,21 @@ CA
                                                                                 </connections>
                                                                             </buttonCell>
                                                                         </button>
-                                                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="4SI-pu-cUG">
-                                                                            <rect key="frame" x="1" y="347" width="211" height="5"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                            <font key="titleFont" metaFont="system"/>
-                                                                        </box>
                                                                     </subviews>
                                                                 </view>
                                                             </tabViewItem>
                                                             <tabViewItem label="Files" identifier="Files" id="11123">
                                                                 <view key="view" id="11124">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="210.99999071600141" height="392"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="211" height="370"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <button verticalHuggingPriority="750" id="unX-nd-w8C" customClass="DBLockedButton">
-                                                                            <rect key="frame" x="-1" y="354" width="212.99999071600141" height="19"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tQ2-IP-RPv">
-                                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                                <font key="font" metaFont="system"/>
-                                                                            </buttonCell>
-                                                                        </button>
                                                                         <browser focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" enabled="YES" hasHorizontalScroller="YES" allowsEmptySelection="YES" defaultColumnWidth="100" minColumnWidth="85" allowsTypeSelect="YES" columnResizingType="user" id="11153">
-                                                                            <rect key="frame" x="0.0" y="37" width="210.99999071600141" height="319"/>
+                                                                            <rect key="frame" x="0.0" y="37" width="211" height="316"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <connections>
                                                                                 <outlet property="delegate" destination="11161" id="11163"/>
                                                                             </connections>
                                                                         </browser>
-                                                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="vKi-pi-Cdo">
-                                                                            <rect key="frame" x="0.0" y="369" width="210.99999071600141" height="5"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                            <font key="titleFont" metaFont="system"/>
-                                                                        </box>
                                                                         <button toolTip="Go to home location on Browser." id="Uon-gz-Q8T">
                                                                             <rect key="frame" x="40" y="3" width="30" height="25"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1411,11 +1378,11 @@ CA
                                                                             </connections>
                                                                         </button>
                                                                         <textField verticalHuggingPriority="750" id="3ez-DV-Ldg">
-                                                                            <rect key="frame" x="3" y="374.5" width="96" height="14"/>
+                                                                            <rect key="frame" x="6" y="353.5" width="96" height="14"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Files" id="n3F-sI-5xP">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -1428,7 +1395,7 @@ CA
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="11214">
-                                                                            <rect key="frame" x="-1" y="0.0" width="212" height="350"/>
+                                                                            <rect key="frame" x="-1" y="0.0" width="212" height="353"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <clipView key="contentView" id="JAu-Kq-CD1">
                                                                                 <rect key="frame" x="1" y="17" width="210" height="355"/>
@@ -1547,21 +1514,14 @@ CA
                                                                             </tableHeaderView>
                                                                         </scrollView>
                                                                         <textField verticalHuggingPriority="750" id="F6o-fy-xYu">
-                                                                            <rect key="frame" x="3" y="351.5" width="98" height="14"/>
+                                                                            <rect key="frame" x="6" y="353.5" width="98" height="14"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Recent selections" id="TFx-Q7-f18">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="Uqt-0w-MfZ">
-                                                                            <rect key="frame" x="0.0" y="347" width="211" height="5"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                            <font key="titleFont" metaFont="system"/>
-                                                                        </box>
                                                                     </subviews>
                                                                 </view>
                                                             </tabViewItem>
@@ -1593,42 +1553,31 @@ CA
                                         <font key="titleFont" metaFont="system"/>
                                     </box>
                                     <button identifier="Files" toolTip="Show system files" verticalHuggingPriority="750" id="11129">
-                                        <rect key="frame" x="87" y="555" width="36" height="32"/>
+                                        <rect key="frame" x="114" y="555" width="35" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="bevel" alternateTitle="Files" bezelStyle="regularSquare" image="Internal" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="11130">
+                                        <buttonCell key="cell" type="bevel" title="File" alternateTitle="Files" bezelStyle="regularSquare" image="Internal" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="11130">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="selectTab:" target="11137" id="11151"/>
                                         </connections>
                                     </button>
                                     <button identifier="Recent" toolTip="Show rescent outline selections" verticalHuggingPriority="750" id="kz0-l6-arq">
-                                        <rect key="frame" x="156" y="555" width="36" height="32"/>
+                                        <rect key="frame" x="169" y="555" width="35" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="bevel" alternateTitle="Recent" bezelStyle="regularSquare" image="clock" imagePosition="below" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rdv-SA-IU4">
+                                        <buttonCell key="cell" type="bevel" title="Recent" alternateTitle="Recent" bezelStyle="regularSquare" image="clock" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rdv-SA-IU4">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="selectTab:" target="11137" id="dzn-zN-D3b"/>
                                         </connections>
                                     </button>
-                                    <button identifier="Folder" toolTip="Show topics" verticalHuggingPriority="750" id="11126">
-                                        <rect key="frame" x="17" y="555" width="36" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="bevel" title="T" alternateTitle="Folder" bezelStyle="regularSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="11127">
-                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                            <font key="font" size="18" name="LucidaGrande-Bold"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="selectTab:" target="11137" id="11148"/>
-                                        </connections>
-                                    </button>
                                     <button toolTip="Show/hide calendar" focusRingType="none" tag="-1" id="H1B-vr-VCA">
-                                        <rect key="frame" x="6" y="532" width="200" height="17"/>
+                                        <rect key="frame" x="3" y="532" width="203" height="17"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="bevel" title=" Calendar" bezelStyle="regularSquare" image="Calender-icon" imagePosition="left" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ddM-sF-0gY">
+                                        <buttonCell key="cell" type="bevel" title=" Calendar" bezelStyle="regularSquare" imagePosition="left" alignment="left" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ddM-sF-0gY">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
                                             <connections>
@@ -1644,26 +1593,68 @@ CA
                                         <font key="titleFont" metaFont="system"/>
                                     </box>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mea-c5-Lji">
-                                        <rect key="frame" x="59" y="588" width="95" height="14"/>
+                                        <rect key="frame" x="68" y="585" width="74" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Outline Selection" id="p6g-T8-I42">
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Outline types" id="p6g-T8-I42">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button identifier="Recent" toolTip="Show named topical outlines" verticalHuggingPriority="750" id="gAX-us-Kyy">
+                                        <rect key="frame" x="5" y="555" width="35" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="Topic" alternateTitle="Folder" bezelStyle="regularSquare" image="Topic" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zIx-PE-2mQ">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="selectTab:" target="11137" id="FU3-PZ-PKI"/>
+                                        </connections>
+                                    </button>
+                                    <button identifier="Files" toolTip="Show/hide calendar" verticalHuggingPriority="750" id="Orr-xL-u39">
+                                        <rect key="frame" x="60" y="555" width="35" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="Date" alternateTitle="Dates" bezelStyle="regularSquare" image="Calender-icon" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mTD-sc-9qK">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                             </customView>
                             <customView id="9540">
                                 <rect key="frame" x="212" y="0.0" width="542" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="xtX-hx-ggs">
+                                        <rect key="frame" x="522" y="525" width="37" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView">
+                                            <rect key="frame" x="1" y="1" width="35" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button toolTip="Add another outline view" focusRingType="none" id="BiG-Wd-inT">
+                                                    <rect key="frame" x="6" y="29" width="10" height="10"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="bevel" title="Add view" bezelStyle="regularSquare" image="NSAddTemplate" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="Hel-B6-6u6">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="addView:" target="10778" id="vPx-SK-nDT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </box>
                                     <splitView focusRingType="none" autosaveName="DetailViews" dividerStyle="thin" vertical="YES" id="9751" customClass="DBDetailViewsSplitView">
                                         <rect key="frame" x="0.0" y="37" width="543" height="515"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </splitView>
                                     <box focusRingType="none" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="9708">
-                                        <rect key="frame" x="-3" y="548.5" width="546" height="4"/>
+                                        <rect key="frame" x="-3" y="549.5" width="546" height="4"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1731,14 +1722,14 @@ CA
                                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </box>
                                     <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="G74-7P-j1z">
-                                        <rect key="frame" x="180" y="557" width="181" height="32"/>
+                                        <rect key="frame" x="180" y="561" width="181" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView">
                                             <rect key="frame" x="1" y="1" width="179" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tWK-mm-U5g">
-                                                    <rect key="frame" x="41" y="8" width="81" height="17"/>
+                                                    <rect key="frame" x="49" y="8" width="81" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Outline View" id="XSc-dC-43m">
                                                         <font key="font" metaFont="system"/>
@@ -1746,17 +1737,6 @@ CA
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <button toolTip="Add another outline view" focusRingType="none" id="hyl-40-GPN">
-                                                    <rect key="frame" x="128" y="11" width="10" height="10"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="bevel" title="Add view" bezelStyle="regularSquare" image="NSAddTemplate" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="Ird-OU-2Dg">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                    <connections>
-                                                        <action selector="addView:" target="10778" id="qlb-Uy-b8D"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -4415,7 +4395,7 @@ IA
         <objectController id="11137" customClass="DBNavigationController">
             <connections>
                 <outlet property="filesTab" destination="11129" id="11138"/>
-                <outlet property="folderTab" destination="11126" id="11139"/>
+                <outlet property="folderTab" destination="gAX-us-Kyy" id="EsM-Ea-FrR"/>
                 <outlet property="navTabView" destination="11121" id="11140"/>
                 <outlet property="recentTab" destination="kz0-l6-arq" id="95Q-DK-LA0"/>
             </connections>
@@ -4871,6 +4851,7 @@ IA
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
         <image name="SmallFolderBW" width="13" height="13"/>
+        <image name="Topic" width="20.819276809692383" height="20.819276809692383"/>
         <image name="clock" width="20.819276809692383" height="20.819276809692383"/>
         <image name="globalBW" width="13" height="13"/>
         <image name="list_bullets" width="16" height="16"/>

@@ -72,7 +72,7 @@
   //[filesTab unmakeTextBold];
   //[recentTab unmakeTextBold];
   
-  [sender makeTextBold];
+  //[sender makeTextBold];
   [[NSUserDefaults standardUserDefaults] setObject: title
                                             forKey:@"activeTab"];
 }

@@ -62,6 +62,7 @@
 		9A25985119E0AC5500AE80A6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DDAAC6A51814204B00BD255B /* Credits.rtf */; };
 		9A25985319E10D5900AE80A6 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A25985219E10D5900AE80A6 /* LICENSE.md */; };
 		9A55F3D518770C46003CF9BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A55F3D418770C46003CF9BA /* Images.xcassets */; };
+		9A62309F1ABA8A5E00DD5ECF /* Topic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A62309E1ABA8A5E00DD5ECF /* Topic.png */; };
 		9A7C520918C98C55006B7B2E /* DBObjectClipboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */; };
 		9A7F9E751A33E44A00A7C8E5 /* AppIcon512dpi180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */; };
 		9A7F9E791A33E53A00A7C8E5 /* AppIcon128dpi90.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */; };
@@ -352,6 +353,7 @@
 		9A25984C19DFC72400AE80A6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9A25985219E10D5900AE80A6 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		9A55F3D418770C46003CF9BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Episodic Notes/Images.xcassets"; sourceTree = "<group>"; };
+		9A62309E1ABA8A5E00DD5ECF /* Topic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Topic.png; path = Images/Topic.png; sourceTree = "<group>"; };
 		9A7C520718C98C55006B7B2E /* DBObjectClipboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBObjectClipboard.h; sourceTree = "<group>"; };
 		9A7C520818C98C55006B7B2E /* DBObjectClipboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBObjectClipboard.m; sourceTree = "<group>"; };
 		9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon512dpi180.png; path = Images/AppIcon512dpi180.png; sourceTree = "<group>"; };
@@ -1103,17 +1105,14 @@
 		DD519A4615B3CE3600DBC21E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9A043E071A7C63DE005BF73F /* Episodic promo.jpg */,
-				9AE0F6A4190352E5004CC3EF /* Scriptaker icon.pdf */,
-				9AE0F6A2190352AB004CC3EF /* AppIcon.pdf */,
-				9AA7679018F38D480013E4DB /* lock_1396939753.png */,
-				9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */,
-				9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */,
-				9A7F9E7C1A33F1DD00A7C8E5 /* AppIcon32dpi180.png */,
-				9A1B770D18EA4EF500604364 /* list_bullets.png */,
 				9A1B770518E7864B00604364 /* 16x16 camera.png */,
+				9A62309E1ABA8A5E00DD5ECF /* Topic.png */,
 				9A1B770318E7863900604364 /* 20x20 camera.png */,
 				9A00523018788ECF006F7A96 /* AddView.pdf */,
+				9AE0F6A2190352AB004CC3EF /* AppIcon.pdf */,
+				9A7F9E7C1A33F1DD00A7C8E5 /* AppIcon32dpi180.png */,
+				9A7F9E781A33E53A00A7C8E5 /* AppIcon128dpi90.png */,
+				9A7F9E741A33E44A00A7C8E5 /* AppIcon512dpi180.png */,
 				DDCB5E0D15D8AA4500FE49F4 /* blankDate3.png */,
 				9A0EBAC618E7653F00922EF7 /* Calender-icon.png */,
 				9A0EBAC018E75B4500922EF7 /* clock.png */,
@@ -1121,6 +1120,7 @@
 				DDC4885B16AE534000B07E47 /* DragCopy.png */,
 				DDC4885C16AE534000B07E47 /* DragLink.png */,
 				DDC4886116AE54CC00B07E47 /* DragMove.png */,
+				9A043E071A7C63DE005BF73F /* Episodic promo.jpg */,
 				9A0EBAC218E7653400922EF7 /* Folder-icon.png */,
 				9A0EBAC318E7653400922EF7 /* Folder-recent-icon.png */,
 				DD519A4815B3CE5100DBC21E /* GenericFolderIcon.png */,
@@ -1131,8 +1131,10 @@
 				9A1B770918E876AB00604364 /* Internal.icns */,
 				9A00523818788EEF006F7A96 /* LinkToPrevious.pdf */,
 				9A00523918788EEF006F7A96 /* LinkToSame.pdf */,
+				9A1B770D18EA4EF500604364 /* list_bullets.png */,
 				9A00523A18788EEF006F7A96 /* local.pdf */,
 				9A00523B18788EEF006F7A96 /* localBW.pdf */,
+				9AA7679018F38D480013E4DB /* lock_1396939753.png */,
 				DDEACD1417FBE954001CFAC2 /* MoveDragType.png */,
 				DDEE508518124C1400EF925C /* MoveDragType2.png */,
 				DD519A4915B3CE5100DBC21E /* OpenFolderIcon.png */,
@@ -1143,6 +1145,7 @@
 				DD80FD0316F4F59F00546551 /* radioPicImage.png */,
 				9A00522E18788EBB006F7A96 /* RemoveView.pdf */,
 				9A00525418788FB5006F7A96 /* Script.pdf */,
+				9AE0F6A4190352E5004CC3EF /* Scriptaker icon.pdf */,
 				DD94161217B600AC00BE6AA4 /* SmallCheck.png */,
 				DD94161017B5FD2400BE6AA4 /* SmallFolder.png */,
 				DDAE6B0E1840769400719683 /* SmallFolderBW.png */,
@@ -1506,7 +1509,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0620;
 			};
 			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Episodic Notes" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1593,6 +1596,7 @@
 				DDEE508618124C1400EF925C /* MoveDragType2.png in Resources */,
 				DD054A0E1814397D001B70CC /* ScriptTaker.app in Resources */,
 				9A00522F18788EBB006F7A96 /* RemoveView.pdf in Resources */,
+				9A62309F1ABA8A5E00DD5ECF /* Topic.png in Resources */,
 				9A00524218788EEF006F7A96 /* local.pdf in Resources */,
 				DDAE6B0F1840769400719683 /* SmallFolderBW.png in Resources */,
 				9A00525718788FC1006F7A96 /* subgroup2.pdf in Resources */,

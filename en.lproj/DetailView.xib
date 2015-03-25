@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1070" defaultVersion="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="Detail View Controller" customClass="DBDetailViewController">
@@ -56,7 +56,7 @@
             </connections>
         </objectController>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <objectController id="877" customClass="DBEditDatesController">
             <connections>
                 <outlet property="myWindow" destination="878" id="896"/>
@@ -129,28 +129,8 @@
                         <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="889">
                             <font key="font" metaFont="smallSystem"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 08:00:00 -0800-->
-                                <timeZone key="timeZone" name="US/Pacific">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
+                                <!--1982-02-12 16:00:00 +0000-->
+                                <timeZone key="timeZone" name="US/Pacific"/>
                             </calendarDate>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -165,28 +145,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="894">
                             <font key="font" metaFont="smallSystem"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 08:00:00 -0800-->
-                                <timeZone key="timeZone" name="US/Pacific">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
+                                <!--1982-02-12 16:00:00 +0000-->
+                                <timeZone key="timeZone" name="US/Pacific"/>
                             </calendarDate>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -201,28 +161,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <datePickerCell key="cell" controlSize="small" borderStyle="bezel" focusRingType="none" alignment="left" id="895">
                             <font key="font" metaFont="smallSystem"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 08:00:00 -0800-->
-                                <timeZone key="timeZone" name="US/Pacific">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
+                                <!--1982-02-12 16:00:00 +0000-->
+                                <timeZone key="timeZone" name="US/Pacific"/>
                             </calendarDate>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -277,11 +217,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <splitView focusRingType="none" autosaveName="" id="61" customClass="DBDetailSplitView">
-                    <rect key="frame" x="-1" y="0.0" width="349" height="486"/>
+                    <rect key="frame" x="-1" y="0.0" width="349" height="483"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <customView focusRingType="none" id="72">
-                            <rect key="frame" x="0.0" y="0.0" width="349" height="292"/>
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="290"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button focusRingType="none" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="77">
@@ -296,14 +236,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </connections>
                                 </button>
                                 <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="75">
-                                    <rect key="frame" x="-1" y="19" width="351" height="273"/>
+                                    <rect key="frame" x="-1" y="20" width="351" height="270"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <clipView key="contentView" id="7fh-BS-DGc">
                                         <rect key="frame" x="1" y="17" width="349" height="255"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="317" viewBased="YES" indentationPerLevel="15" outlineTableColumn="83" id="80" customClass="DBDetailOutlineView">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="255"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <size key="intercellSpacing" width="3" height="3"/>
                                                 <color key="backgroundColor" red="0.9143476277" green="0.94927577549999997" blue="0.98069685220000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -344,7 +283,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     </tableColumn>
                                                     <tableColumn identifier="Detail" editable="NO" width="60" minWidth="16" maxWidth="100000" id="83">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <font key="font" metaFont="miniSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -380,7 +319,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     </tableColumn>
                                                     <tableColumn identifier="Associated" editable="NO" width="63" minWidth="63" maxWidth="63" id="1302">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Associated">
-                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <font key="font" metaFont="miniSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -407,7 +346,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     </tableColumn>
                                                     <tableColumn identifier="Created" editable="NO" width="63" minWidth="63" maxWidth="63" id="1317">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Created">
-                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <font key="font" metaFont="miniSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -434,7 +373,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     </tableColumn>
                                                     <tableColumn identifier="Modified" editable="NO" width="63" minWidth="63" maxWidth="63" id="1333">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Modified">
-                                                            <font key="font" size="9" name="LucidaGrande"/>
+                                                            <font key="font" metaFont="miniSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -608,8 +547,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <autoresizingMask key="autoresizingMask"/>
                                     </tableHeaderView>
                                 </scrollView>
-                                <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="73">
-                                    <rect key="frame" x="-1" y="17" width="350" height="5"/>
+                                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="73">
+                                    <rect key="frame" x="-1" y="18" width="350" height="5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -640,34 +579,34 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </subviews>
                         </customView>
                         <customView focusRingType="none" id="71">
-                            <rect key="frame" x="0.0" y="301" width="349" height="185"/>
+                            <rect key="frame" x="0.0" y="299" width="349" height="184"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <tabView type="noTabsNoBorder" id="9uP-68-pe4">
-                                    <rect key="frame" x="0.0" y="-1" width="349" height="185.5"/>
+                                    <rect key="frame" x="0.0" y="-1" width="349" height="184.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <tabViewItems>
                                         <tabViewItem identifier="Details" id="wda-DJ-uxg" userLabel="Bullet detail tab">
                                             <view key="view" id="h0d-p1-kFc">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="185.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="184.5"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tabView focusRingType="none" type="noTabsNoBorder" id="101">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="149.5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                         <tabViewItems>
                                                             <tabViewItem label="File" identifier="FileTab" id="104" userLabel="File Tab">
                                                                 <view key="view" id="105">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="150.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="149.5"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <box autoresizesSubviews="NO" borderType="line" id="mbU-SA-uNy">
-                                                                            <rect key="frame" x="2" y="1" width="347" height="162"/>
+                                                                            <rect key="frame" x="2" y="1" width="347" height="161"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <view key="contentView">
-                                                                                <rect key="frame" x="1" y="1" width="345" height="146"/>
+                                                                                <rect key="frame" x="1" y="1" width="345" height="145"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <subviews>
                                                                                     <textField verticalHuggingPriority="750" id="1180">
@@ -680,7 +619,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                                                         </textFieldCell>
                                                                                     </textField>
                                                                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="1150">
-                                                                                        <rect key="frame" x="9" y="35" width="327" height="90"/>
+                                                                                        <rect key="frame" x="9" y="35" width="327" height="89"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" copiesOnScroll="NO" id="CQr-F0-4sr">
                                                                                             <rect key="frame" x="1" y="1" width="325" height="88"/>
@@ -690,10 +629,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="325" height="88"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                    <size key="minSize" width="325" height="88"/>
+                                                                                                    <size key="minSize" width="325" height="87"/>
                                                                                                     <size key="maxSize" width="531" height="10000000"/>
                                                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                    <size key="minSize" width="325" height="88"/>
+                                                                                                    <size key="minSize" width="325" height="87"/>
                                                                                                     <size key="maxSize" width="531" height="10000000"/>
                                                                                                     <connections>
                                                                                                         <binding destination="254" name="value" keyPath="selection.outputValue" id="bHo-xH-mf7">
@@ -761,7 +700,7 @@ ICA
                                                                                         </connections>
                                                                                     </popUpButton>
                                                                                     <pathControl focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="1163">
-                                                                                        <rect key="frame" x="1" y="124" width="323" height="22"/>
+                                                                                        <rect key="frame" x="1" y="123" width="323" height="22"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                         <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="1164">
                                                                                             <font key="font" metaFont="smallSystem"/>
@@ -792,7 +731,7 @@ ICA
                                                                                         </connections>
                                                                                     </pathControl>
                                                                                     <button id="yx2-lu-9Fp">
-                                                                                        <rect key="frame" x="327" y="130" width="10" height="11"/>
+                                                                                        <rect key="frame" x="327" y="129" width="10" height="11"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                         <buttonCell key="cell" type="bevel" title="Button" bezelStyle="regularSquare" image="NSStopProgressTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="S88-ug-1en">
                                                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -883,7 +822,7 @@ ICA
                                                         </tabViewItems>
                                                     </tabView>
                                                     <button verticalHuggingPriority="750" id="JHs-JY-qUd" customClass="DBLockedButton">
-                                                        <rect key="frame" x="0.0" y="170" width="351" height="19"/>
+                                                        <rect key="frame" x="0.0" y="169" width="351" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JAD-Ot-JgB">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -891,7 +830,7 @@ ICA
                                                         </buttonCell>
                                                     </button>
                                                     <button identifier="FileTab" toolTip="Show file and file output options." focusRingType="none" id="484" userLabel="File tab btn">
-                                                        <rect key="frame" x="334" y="156.5" width="13" height="12"/>
+                                                        <rect key="frame" x="334" y="155.5" width="13" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="TableHeaderFile" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="485">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -902,7 +841,7 @@ ICA
                                                         </connections>
                                                     </button>
                                                     <button identifier="NoteTab" toolTip="Show note." focusRingType="none" id="498" userLabel="Note tab btn">
-                                                        <rect key="frame" x="305" y="156.5" width="13" height="12"/>
+                                                        <rect key="frame" x="305" y="155.5" width="13" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="radioNoteImage" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="499">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -913,7 +852,7 @@ ICA
                                                         </connections>
                                                     </button>
                                                     <button identifier="ImageTab" toolTip="Show image." focusRingType="none" id="500" userLabel="Image tab btn">
-                                                        <rect key="frame" x="320" y="156.5" width="13" height="12"/>
+                                                        <rect key="frame" x="320" y="155.5" width="13" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="16x16 camera" imagePosition="only" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="501">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -924,7 +863,7 @@ ICA
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Check/uncheck bullet." focusRingType="none" id="462">
-                                                        <rect key="frame" x="288" y="153.5" width="19" height="18"/>
+                                                        <rect key="frame" x="288" y="152.5" width="19" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" state="on" focusRingType="none" allowsMixedState="YES" inset="2" id="463">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -944,7 +883,7 @@ ICA
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" id="v5E-dv-rQF">
-                                                        <rect key="frame" x="3" y="174" width="67" height="11"/>
+                                                        <rect key="frame" x="3" y="173" width="67" height="11"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File" id="k4O-0l-Faw">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -963,12 +902,11 @@ ICA
                                                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="85">
                                                         <rect key="frame" x="0.0" y="1" width="350" height="186.5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <clipView key="contentView" id="5gv-oZ-nUB">
+                                                        <clipView key="contentView" drawsBackground="NO" id="5gv-oZ-nUB">
                                                             <rect key="frame" x="1" y="17" width="348" height="168.5"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" autosaveColumns="NO" typeSelect="NO" rowHeight="14" headerView="86" viewBased="YES" indentationPerLevel="10" outlineTableColumn="92" id="89" customClass="DBRelatedOutlineView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="348" height="168.5"/>
+                                                                <outlineView focusRingType="none" appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" autosaveColumns="NO" typeSelect="NO" rowHeight="14" headerView="86" viewBased="YES" indentationPerLevel="10" outlineTableColumn="92" id="89" customClass="DBRelatedOutlineView">
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="3"/>
                                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -976,7 +914,7 @@ ICA
                                                                     <tableColumns>
                                                                         <tableColumn identifier="Detail" width="241" minWidth="16" maxWidth="1000" id="92">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Bullet">
-                                                                                <font key="font" size="9" name="LucidaGrande"/>
+                                                                                <font key="font" metaFont="miniSystem"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </tableHeaderCell>
@@ -1012,7 +950,7 @@ ICA
                                                                         </tableColumn>
                                                                         <tableColumn identifier="Topic" width="101" minWidth="10" maxWidth="3.4028234663852886e+38" id="91">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Topic">
-                                                                                <font key="font" size="9" name="LucidaGrande"/>
+                                                                                <font key="font" metaFont="miniSystem"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                             </tableHeaderCell>
@@ -1049,13 +987,13 @@ ICA
                                                                     </tableColumns>
                                                                 </outlineView>
                                                             </subviews>
-                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <nil key="backgroundColor"/>
                                                         </clipView>
                                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="88">
                                                             <rect key="frame" x="1" y="53" width="174" height="15"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
-                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="87">
+                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="87">
                                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
@@ -1098,7 +1036,7 @@ ICA
                     </connections>
                 </splitView>
                 <button id="308" userLabel="File Topic Button">
-                    <rect key="frame" x="12" y="487" width="17" height="17"/>
+                    <rect key="frame" x="12" y="486" width="17" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="309">
                         <behavior key="behavior" lightByContents="YES"/>
@@ -1114,7 +1052,7 @@ ICA
                     </connections>
                 </button>
                 <button id="OVk-3z-MUD" userLabel="Date Topic Button">
-                    <rect key="frame" x="12" y="487" width="17" height="17"/>
+                    <rect key="frame" x="12" y="486" width="17" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Calender-icon" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="FHx-Ut-r1a">
                         <behavior key="behavior" lightByContents="YES"/>
@@ -1130,7 +1068,7 @@ ICA
                     </connections>
                 </button>
                 <button toolTip="Subtopic links." id="1353" customClass="DBSubTopicsButton">
-                    <rect key="frame" x="14" y="487" width="13" height="18"/>
+                    <rect key="frame" x="14" y="486" width="13" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="local" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="1354">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1150,7 +1088,7 @@ ICA
                     </connections>
                 </button>
                 <textField focusRingType="none" verticalHuggingPriority="750" id="49">
-                    <rect key="frame" x="44" y="488" width="290" height="14"/>
+                    <rect key="frame" x="44" y="487" width="290" height="14"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Detail Outline View" placeholderString="Detail Outline View" id="132">
                         <font key="font" metaFont="smallSystemBold"/>
@@ -1166,15 +1104,15 @@ ICA
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="379">
-                    <rect key="frame" x="0.0" y="483" width="349" height="5"/>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="379">
+                    <rect key="frame" x="0.0" y="481" width="349" height="5"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
                 <button id="C48-KC-u9A">
-                    <rect key="frame" x="28" y="484" width="13" height="21"/>
+                    <rect key="frame" x="28" y="483" width="13" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bUL-UV-Oww">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1184,7 +1122,7 @@ ICA
                         <action selector="forwardHistory:" target="-2" id="2gR-y1-Ac1"/>
                     </connections>
                 </button>
-                <box autoresizesSubviews="NO" horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="52">
+                <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="52">
                     <rect key="frame" x="346" y="0.0" width="5" height="506"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -1192,7 +1130,7 @@ ICA
                     <font key="titleFont" metaFont="system"/>
                 </box>
                 <button id="HNf-eJ-QPy">
-                    <rect key="frame" x="0.0" y="484" width="13" height="21"/>
+                    <rect key="frame" x="0.0" y="483" width="13" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="P6K-KT-ySq">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1209,8 +1147,8 @@ ICA
         <image name="16x16 camera" width="16" height="16"/>
         <image name="20x20 camera" width="20" height="20"/>
         <image name="Calender-icon" width="48" height="48"/>
-        <image name="NSGoLeftTemplate" width="9" height="9"/>
-        <image name="NSGoRightTemplate" width="9" height="9"/>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
         <image name="TableHeaderFile" width="13" height="13"/>
